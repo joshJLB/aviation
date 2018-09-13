@@ -85,4 +85,11 @@ function detectBrowser() {
 }
 $('body').addClass(detectBrowser());
 
+// sliders
+
+$('.three-content').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  vertical: true,
+}) 
 });//close all jquery

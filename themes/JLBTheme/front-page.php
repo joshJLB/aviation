@@ -74,6 +74,25 @@ get_header(); ?>
     </div>
   </section>
 
+  <section class="three">
+    <div class="three-container">
+      <div class="three-left">
+        <h2><?=get_field('three_title'); ?></h2>
+        <div class="three-content">
+          <?php if(get_field('three_repeater')): ?>
+          <?php while( have_rows('three_repeater') ): the_row();?>
+            <div class="slide">
+              <p><?=get_sub_field('repeater_item'); ?></p>
+            </div>
+          <?php endwhile; ?>
+          <?php endif; ?>
+        </div>
+        <a href="<?=get_field('three_link_url'); ?>"><?=get_field('three_link_text'); ?></a>
+      </div>
+      <div class="three-right" style="background-image: url(<?=get_field('three_image'); ?>);"></div> 
+    </div>
+  </section>
+
 </main>
 
 <?php get_footer();
