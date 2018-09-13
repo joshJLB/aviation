@@ -9,12 +9,10 @@ get_header(); ?>
 
   <?php get_template_part('components/home-page/hero'); ?>
   <!-- Or, nah -->
-  <section class="hero">
-
-  </section>
 
   <!-- Continue Sections -->
 
+  
 </main>
 
 <?php get_footer();

@@ -15,7 +15,7 @@
       <div class="header">
         <div class="header-content">
           <a class="logo-container" href="<?php echo home_url(); ?>">
-            <div class="logo" style="background-image: url('#logo');"></div>
+            <div class="logo" style="background-image: url(<?=get_field('header_logo', 'option'); ?>);"></div>
           </a>
         </div> <!-- Header Content & Logo -->
         <nav class="header-nav">
@@ -38,6 +38,10 @@
       <div class="mobile-menu" id="mobile-menu">
         <nav class="menu-container">
           <?php wp_nav_menu( array( 'menu' => 'Header Menu' ) ); ?>
+          <div class="menu-two">
+            <a href="tel:<?=get_field('phone', 'option'); ?>"><?=get_field('phone', 'option'); ?></a>
+            <a href="mailto:<?get_field('email', 'option'); ?>"><i class="far fa-envelope"></i></a>
+          </div>
         </nav>
       </div>
 

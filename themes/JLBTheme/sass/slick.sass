@@ -2,9 +2,30 @@
 
 // Slick Styling
 #home
-  .hero-slider
-    height: 100%
-    width: 100%
+  .hero
+    position: relative
+    padding: 15rem 30rem 36.5rem 20rem
+    background-size: cover
+    @media #{$xxlarge}
+      padding: 15rem 30rem 30rem 6rem
+      background-position: center
+    @media #{$large}
+      padding: 10rem 30rem 20rem 6rem
+    @media #{$small}
+      padding: 10rem
+    .header-content
+      @media #{$medium}
+        display: none
+      .logo-container
+        height: 100%
+        width: 100%
+        .logo
+          +bg(contain, center)
+          height: 13rem
+          @media #{$xxlarge}
+            height: 8rem
+          @media #{$large}
+            height: 5rem
   .slick-list, .slick-track
     height: 100%
     .hero-slide

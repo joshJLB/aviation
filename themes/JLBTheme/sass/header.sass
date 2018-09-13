@@ -2,27 +2,39 @@
 
 // Header Styling
 header
-  background: orange
+  padding: 2rem 3rem
   position: fixed
   width: 100%
   top: 0
   left: 0
   transition: 0.25s
   z-index: 999
+  @media #{$small}
+    padding: .5rem 1.5rem
   .header
+    position: relative
     +fb(center, space-between)
     padding: 1rem 2rem
+    @media #{$medium}
+      padding: 0
     .header-content
+      visibility: hidden
       width: 20%
+      @media #{$medium}
+        visibility: visible
       .logo-container
         height: 100%
         width: 100%
         .logo
           +bg(contain, center)
           height: 5rem
+          @media #{$small}
+            width: 5rem
     .header-nav
       margin-left: auto
       margin-right: 2rem
+      @media #{$medium}
+        display: none
       a 
         color: #fff 
         font-size: 1.5rem
@@ -85,6 +97,15 @@ header
     .menu-item-has-children
       a
         color: transparentize($color1, 0.5)
+  .menu-two 
+    visibility: hidden
+    @media #{$medium}
+      visibility: visible
+    a 
+      display: block
+      padding: .25rem 1rem
+      font-size: 1.25rem
+      font-weight: 300
 
 .mobile-menu.active
   transform: translateX(0)
