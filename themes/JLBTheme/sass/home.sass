@@ -1,3 +1,105 @@
 @import 'variables'
 
 // Home Page Styling
+.one 
+    margin-top: -7rem
+    @media #{$large}
+        margin-top: -2rem
+    .one-container
+        margin: 0 auto
+        width: 75%
+        @media #{$xlarge}
+            width: 95%
+        .tab-container
+            margin-top: 1.5rem
+            width: 100%
+            @media screen and (max-width: 768px)
+                margin: 0 auto
+                width: 95%
+            ul
+                border-bottom: 0
+                display: flex
+                flex-wrap: nowrap
+                justify-content: center
+                align-items: center
+                @media screen and (max-width: 768px)
+                    display: flex
+                    flex-wrap: wrap
+                li
+                    width: 1%
+                    flex-grow: 1
+                    padding: .75rem
+                    border-radius: 0
+                    text-align: center
+                    @media screen and (max-width: 768px)
+                        width: 100%
+                a.nav-link
+                    padding: 1rem 2.5rem
+                    background-color: #eee
+                    border-radius: 0
+                    border: 0
+                    text-transform: uppercase
+                    position: relative
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 1rem
+                    font-weight: 400
+                    @media #{$large}
+                        font-size: 1rem
+                a.nav-link.active 
+                    height: 5rem
+                    border-radius: 0
+                    background-color: $color2
+                a.nav-link.active:after
+                    content: ''
+                    position: absolute
+                    top: 100%
+                    left: 50%
+                    transform: translateX(-50%)
+                    width: 90%
+                    height: 10px
+                    background-color: transparent
+                    color: transparent
+                    box-shadow: 0 20px 20px $color2
+                    @media #{$medium}
+                        display: none
+                a.nav-link:hover 
+                    background-color: $color2
+            .tab-content
+                padding: 2.5rem 5rem
+                margin: .75rem .75rem .3rem
+                @media #{$xlarge}
+                    padding: 1.5rem 
+                    margin: 0
+                @media screen and (max-width: 768px)
+                    padding: 2.5rem 1rem
+                .tab-pane
+                    .content-holder
+                        padding: 1rem
+                        width: 100%
+                        text-align: center
+                        @media screen and (max-width: 1024px)
+                            padding-left: 0
+                        @media screen and (max-width: 786px)
+                            width: 100%
+                            padding: 0 0 2rem
+                        h2 
+                            margin-bottom: 3rem
+                            font-size: 3rem
+                            @media #{$xlarge}
+                                margin-bottom: 2rem
+                                font-size: 2.5rem
+                            @media #{$small}
+                                font-size: 2rem
+                        p 
+                            margin-bottom: 3rem
+                        a 
+                            padding: .5rem 1rem
+                            font-family: $font1
+                            font-size: 1.5rem
+                            border: 2px solid $color2
+                            @media #{$small}
+                                font-size: 1.2rem
