@@ -19,13 +19,14 @@
           </a>
         </div> <!-- Header Content & Logo -->
         <nav class="header-nav">
-          <?php wp_nav_menu( array( 'menu' => 'Header Menu' ) ); ?>
-          <button type="button" name="search"><a href="<?php echo home_url(); ?>"><i class="fas fa-search"></i></a></button>
+        <a href="tel:<?=get_field('phone', 'option'); ?>"><?=get_field('phone', 'option'); ?></a>
+        <a href="mailto:<?get_field('email', 'option'); ?>"><i class="far fa-envelope"></i></a>
         </nav> <!-- Header Navigation -->
 
         <!-- Button trigger modal -->
         <div class="mobile-button">
           <div class="button-container">
+            <p>menu</p>
             <div class="bar1 bar"></div>
             <div class="bar2 bar"></div>
             <div class="bar3 bar"></div>

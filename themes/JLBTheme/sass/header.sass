@@ -2,6 +2,7 @@
 
 // Header Styling
 header
+  background: orange
   position: fixed
   width: 100%
   top: 0
@@ -20,60 +21,21 @@ header
           +bg(contain, center)
           height: 5rem
     .header-nav
-      width: 80%
-      .menu
-        +fb(center, flex-end)
-        padding: 0
-        margin: 0
-        list-style: none
-        .menu-item
-          margin: 0 0.25rem
-          a
-            display: inline-block
-            padding: 0.5rem
-        .menu-item-has-children.rotate
-          &:after
-            transform: rotate(180deg) translateY(50%)
-            transform-origin: center
-        .menu-item-has-children
-          position: relative
-          +fb(center, center)
-          &:after
-            content: '\f107'
-            font-family: 'Font Awesome 5 Pro'
-            +fb(center, center)
-            cursor: pointer
-            position: absolute
-            top: 50%
-            right: 0.25rem
-            transform: translateY(-50%)
-            transition: 0.25s
-          .sub-menu.scrollMenu
-            // on scroll sub menu
-          .sub-menu.active
-            opacity: 1
-            pointer-events: auto
-          .sub-menu
-            opacity: 0
-            pointer-events: none
-            position: absolute
-            left: 0
-            bottom: 0
-            transform: translateY(100%)
-            padding: 0
-            .menu-item
-              margin: 0
-              list-style: none
-              white-space: nowrap
-              a
-                padding: 0.25rem
+      margin-left: auto
+      margin-right: 2rem
+      a 
+        color: #fff 
+        font-size: 1.5rem
+        padding-right: 1rem
 
 // Mobile Menu Button
 .mobile-button
-  display: none
-  @media #{$large}
     +fb(center, center)
-
+    color: #fff
+    p 
+      font-size: .62rem
+      text-transform: uppercase
+      margin-bottom: .5rem
 // Mobile Menu Styling
 .mobile-menu
   position: fixed
@@ -137,11 +99,12 @@ header
   background-color: black !important
 
 .bar
-  background-color: black
+  background-color: #fff
   height: 4px
   width: 2rem
   margin-bottom: 5px
   transition: 0.25s
+  border-radius: 5px
   &:last-child
     margin-bottom: 0
 
