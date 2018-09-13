@@ -6,6 +6,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo home_url(); ?>">
     <link rel="apple-touch-icon" href="<?php echo home_url(); ?>"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Montserrat:300,400,400i,500" rel="stylesheet">
     <script defer src="https://pro.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-d84LGg2pm9KhR4mCAs3N29GQ4OYNy+K+FBHX8WhimHpPm86c839++MDABegrZ3gn" crossorigin="anonymous"></script>
     <?php wp_head(); ?>
   </head>
@@ -25,7 +26,6 @@
         <!-- Button trigger modal -->
         <div class="mobile-button">
           <div class="button-container">
-          yes
             <div class="bar1 bar"></div>
             <div class="bar2 bar"></div>
             <div class="bar3 bar"></div>
