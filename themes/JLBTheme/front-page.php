@@ -58,6 +58,22 @@ get_header(); ?>
     </div>
   </section>
   
+  <section class="two">
+    <div class="two-container">
+      <div class="two-left" style="background-image: url(<?=get_field('two_image'); ?>);">
+        <img class="two-owner-image" src="<?=get_field('two_owner_image'); ?>" alt="">
+      </div>
+      <div class="two-right">
+        <h2><?=get_field('two_title'); ?></h2>
+        <?=get_field('two_content'); ?>
+        <p class="two-owner-text">
+          <?=get_field('two_owner'); ?>
+          <img class="two-signature" src="<?=get_field('two_signature'); ?>" alt="">
+        </p>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <?php get_footer();
