@@ -98,6 +98,13 @@ get_header(); ?>
     </div>
   </section>
 
+  <section class="four">
+    <div class="four-container" style="background-image: url(<?=get_field('four_image'); ?>);">
+      <h2><?=get_field('four_title'); ?></h2>
+      <p><?=get_field('four_content'); ?></p>
+    </div>
+  </section>
+
 </main>
 
 <?php get_footer();
