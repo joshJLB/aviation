@@ -8,14 +8,12 @@ header
   left: 0
   transition: 0.25s
   z-index: 999
-  @media #{$small}
-    padding: .5rem 1.5rem
   .header
     padding: 3rem 5rem 0
     position: relative
     +fb(center, space-between)
     @media #{$medium}
-      padding: 0
+      padding: 1rem 3rem
     .header-content
       visibility: hidden
       width: 20%
@@ -44,11 +42,15 @@ html body header
   background-color: $color4
   box-shadow: 0 0 5px black
   transition: .25s
+  .header-content
+    visibility: visible
 header.active 
   .header
     padding: 1rem 3rem
     background-color: $color4
     transition: .5s
+    .header-content
+      visibility: visible
 // Mobile Menu Button
 .mobile-button
     +fb(center, center)
