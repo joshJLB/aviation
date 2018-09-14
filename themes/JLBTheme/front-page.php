@@ -82,14 +82,19 @@ get_header(); ?>
           <?php if(get_field('three_repeater')): ?>
           <?php while( have_rows('three_repeater') ): the_row();?>
             <div class="slide">
-              <p><?=get_sub_field('repeater_item'); ?></p>
+              <i class="fal fa-angle-right"></i><p><?=get_sub_field('repeater_item'); ?></p>
             </div>
           <?php endwhile; ?>
           <?php endif; ?>
         </div>
-        <a href="<?=get_field('three_link_url'); ?>"><?=get_field('three_link_text'); ?></a>
+        <div class="three-link">
+          <a href="<?=get_field('three_link_url'); ?>"><?=get_field('three_link_text'); ?></a>
+          <i class="fal fa-angle-right three-link-arrow"></i>
+        </div>
       </div>
-      <div class="three-right" style="background-image: url(<?=get_field('three_image'); ?>);"></div> 
+      <div class="three-right" style="background-image: url(<?=get_field('three_image'); ?>);">
+        <div class="overlay2"></div>
+      </div> 
     </div>
   </section>
 

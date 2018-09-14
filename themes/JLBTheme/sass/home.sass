@@ -1,6 +1,6 @@
 @import 'variables'
 
-// Home Page Styling
+// Home Page Styling 
 .one 
     margin-top: -7rem
     @media #{$large}
@@ -165,24 +165,59 @@
 .three
     .three-container
         margin-left: auto
-        width: 85%
+        width: 90%
+        position: relative
         +fb(stretch,flex-start)
+        @media #{$medium}
+            width: 100%
         .three-left
             padding: 10rem 0
-            width: 45%
+            width: 40%
+            @media #{$xxlarge}
+                width: 50%
+            @media #{$large}
+                z-index: 3
+                position: relative
+                width: 80%
+            @media #{$medium}
+                margin: 0 auto
+                width: 90%
             h2 
                 padding: 2rem 2.5rem
                 margin: 0
                 border-left: 2px solid $color2
                 border-bottom: 2px solid $color2
+                @media #{$small}
+                    font-size: 1.5rem
             a 
-                padding: 2rem 2.5rem
+                padding: 2rem 1.25rem 2rem 0
                 margin: 0
-                display: block
-                font-size: 1.5rem
+                display: inline-block
+                font-size: 1.3rem
                 font-family: $font1
                 text-transform: uppercase
                 text-align: right
-                border-right: 2px solid $color2
+                @media #{$small}
+                    padding-left: 2rem
+                    padding-right: .25rem
+                    font-size: 1rem
         .three-right
-            width: 55%
+            width: 60%
+            background-size: cover 
+            background-position: right
+            @media only screen and (max-width: 1530px)
+                background-position: center
+            @media #{$xxlarge}
+                width: 50%
+            @media #{$large}
+                z-index: 2
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background-position: right
+            .overlay2
+                display: none
+                @media #{$large}
+                    display: flex
