@@ -3,10 +3,10 @@ jQuery(document).ready(function( $ ) {
 // on scroll watch header
 $(window).on("scroll ready", function() {
   if ( $(window).scrollTop() > 50 ) {
-    $(".header").addClass("active");
+    $("header").addClass("active");
     $('.sub-menu').addClass('scrollMenu');
   } else {
-     $(".header").removeClass("active");
+     $("header").removeClass("active");
      $('.sub-menu').removeClass('scrollMenu');
   }
 });
@@ -20,10 +20,12 @@ $('.mobile-button').click(function() {
   }
   $('.bar').toggleClass('change');
 
+  // change header color
+  $('.header').toggleClass('active');
   // toggle mobile menu
   $('.mobile-menu').toggleClass('active');
   $('.bar').toggleClass('active');
-  $('.header').find('.logo').toggleClass('active');
+  $('.header').find('.logo').toggleClass('.active');
 
   // html overflow
   $('html').toggleClass('mobileScroll');

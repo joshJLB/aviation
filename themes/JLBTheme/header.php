@@ -37,7 +37,7 @@
       <!-- Mobile Menu -->
       <div class="mobile-menu" id="mobile-menu">
         <nav class="menu-container">
-          <?php wp_nav_menu( array( 'menu' => 'Header Menu' ) ); ?>
+          <?php wp_nav_menu( array( 'menu' => 'menu-one' ) ); ?>
           <div class="menu-two">
             <a href="tel:<?=get_field('phone', 'option'); ?>"><?=get_field('phone', 'option'); ?></a>
             <a href="mailto:<?get_field('email', 'option'); ?>"><i class="far fa-envelope"></i></a>

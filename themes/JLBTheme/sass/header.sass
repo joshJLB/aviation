@@ -2,7 +2,6 @@
 
 // Header Styling
 header
-  padding: 2rem 3rem
   position: fixed
   width: 100%
   top: 0
@@ -12,9 +11,9 @@ header
   @media #{$small}
     padding: .5rem 1.5rem
   .header
+    padding: 3rem 5rem 0
     position: relative
     +fb(center, space-between)
-    padding: 1rem 2rem
     @media #{$medium}
       padding: 0
     .header-content
@@ -39,7 +38,17 @@ header
         color: #fff 
         font-size: 1.5rem
         padding-right: 1.5rem
-
+html body header
+.header.active
+  padding: 1rem 3rem
+  background-color: $color4
+  box-shadow: 0 0 5px black
+  transition: .25s
+header.active 
+  .header
+    padding: 1rem 3rem
+    background-color: $color4
+    transition: .5s
 // Mobile Menu Button
 .mobile-button
     +fb(center, center)
@@ -117,7 +126,7 @@ header
 
 // mobile menu button that changes to X
 .bar.active
-  background-color: black !important
+  background-color: #fff
 
 .bar
   background-color: #fff
