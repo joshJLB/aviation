@@ -18,6 +18,6 @@
     <h1 class="title"><?php echo get_the_title(); ?></h1>
     <!-- Anything else for single page child header here -->
   <?php else: ?>
-    <h1 class="title"><?php echo get_the_title(); ?></h1>
+   
   <?php endif; ?>
 </div>

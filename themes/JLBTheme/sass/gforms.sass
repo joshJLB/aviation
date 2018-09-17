@@ -2,7 +2,11 @@
 
 // Gravity Forms Styling
 .widget_gform_widget
-    // margin-bottom: -15rem
+    margin-bottom: -15rem !important
+    @media #{$large}
+        margin-bottom: -22rem
+    @media #{$medium}
+        margin-bottom: -30rem
     .panel-widget-style
         padding: 10rem 0 17rem
         +bg(cover,center)
