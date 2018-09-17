@@ -1,0 +1,45 @@
+@import 'variables'
+
+// Card Demo Styles
+.card-demo-container
+    padding: 10rem 10rem
+    background-color: $color1
+    color: #fff 
+    text-align: center
+    @media #{$xlarge}
+        padding: 10rem 5rem
+    @media #{$medium}
+        padding: 5rem 2rem
+    @media #{$small}
+        padding: 5rem 0
+    h2 
+        margin-bottom: 3rem
+        font-size: 2.5rem
+        text-transform: uppercase
+    .card-demo-inner
+        +fb(stretch, flex-start)
+        flex-wrap: wrap
+        .card-single
+            padding: 0 1rem
+            width: 33.3%
+            @media #{$large}
+                margin: 1rem 0
+                width: 50%
+            @media #{$medium}
+                width: 100%
+            .card-single-image
+                margin-bottom: 2rem
+                height: 15rem
+                +bg(cover,center)
+                box-shadow: 0 0 30px #333
+                @media #{$xxlarge}
+                    height: 13rem
+                @media #{$medium}
+                    height: 20rem
+            h3 
+                margin-bottom: 1rem
+                text-transform: uppercase 
+            a 
+                color: #fff 
+                font-family: $font1
+                text-transform: uppercase
