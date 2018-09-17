@@ -19,7 +19,7 @@ class JLB_Tab_Widget extends SiteOrigin_Widget {
   function initialize() {
       $this->register_frontend_styles(
           array(
-              array( 'jlb-tab-css', '/wp-content/plugins/extend-widgets-bundle/css/jlb-tab-widget.css', array() )
+              array( 'jlb-tab-css', '/wp-content/plugins/extend-widgets-bundle/css/jlb-tab-widget.min.css', array() )
           )
       );
   }
@@ -46,6 +46,11 @@ class JLB_Tab_Widget extends SiteOrigin_Widget {
 
             //The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
             $form_options = array(
+                'title' => array(
+                  'type' => 'text',
+                  'label' => __('Title', 'widget-form-fields-text-domain')
+                ),
+                
                 'a_repeater' => array(
                     'type' => 'repeater',
                     'label' => __( 'Tabs' , 'widget-form-fields-text-domain' ),
@@ -67,17 +72,7 @@ class JLB_Tab_Widget extends SiteOrigin_Widget {
                                     'mce_buttons_4' => array( $this, 'filter_mce_buttons_5' ),
                                     'quicktags_settings' => array( $this, 'filter_quicktags_settings' ),
                                 ),
-                            ),
-
-                            'link_text' => array(
-                                'type' => 'text',
-                                'label' => __( 'Link Text', 'widget-form-fields-text-domain' )
-                            ),
-
-                            'link' => array(
-                                'type' => 'text',
-                                'label' => __( 'Link', 'widget-form-fields-text-domain' )
-                            ),
+                        ),
                     )
                 )
             ),
