@@ -1,3 +1,63 @@
 @import 'variables'
 
 // Gravity Forms Styling
+.widget_gform_widget
+    // margin-bottom: -15rem
+    .panel-widget-style
+        padding: 10rem 0 17rem
+        +bg(cover,center)
+        text-align: center
+        @media #{$large}
+            padding-bottom: 23rem
+        @media #{$medium}
+            padding-bottom: 30rem
+        h3 
+            margin-bottom: 2rem
+        .contact-form_wrapper
+            margin: 0
+            .contact-form
+                margin: 0 auto
+                width: 65%
+                @media #{$large}
+                    width: 85%
+                .gform_body
+                    .gform_fields
+                        +fb(flex-start,flex-start)
+                        flex-wrap: wrap
+                        .gfield
+                            margin: 0
+                            padding: 1rem
+                            width: 50%
+                            @media #{$medium}
+                                padding: 1rem 0
+                                width: 100%
+                            .gfield_label 
+                                display: none
+                            .ginput_container
+                                margin: 0
+                                input, select, textarea 
+                                    padding: 1.25rem 2rem !important
+                                    border: 2px solid #a7a7a7
+                                    background: none
+                                input::placeholder, select, textarea::placeholder
+                                    color: #a7a7a7 
+                                    font-family: $font1
+                        .gfield:last-child 
+                            width: 100%
+                .gform_footer
+                    margin: 0
+                    padding: 1rem 0
+                    text-align: center
+                    // gform value set in scripts.js
+                    .gform_button 
+                        padding: .5rem 1rem
+                        margin: 0 
+                        color: #a7a7a7
+                        font-family: $font1
+                        cursor: pointer
+                        background-color: transparent
+                        border: 2px solid #a7a7a7
+                    .gform_button:hover
+                        color: $color1
+                        border-color: $color1
+                        transition: .25s

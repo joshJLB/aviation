@@ -17,5 +17,6 @@ get_header(); ?>
     <?php endwhile; wp_reset_postdata(); endif; ?>
   </div>
 </main>
-
-<?php get_footer();
+<div class="child-footer">
+  <?php get_footer(); ?>
+</div>
