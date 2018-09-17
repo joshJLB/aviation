@@ -1,0 +1,45 @@
+@import 'variables'
+
+// Image Text Styles
+.image-text-container
+    padding: 2.5rem 2.5rem 0
+    margin: 2.5rem auto
+    width: 75%
+    border-top: 2px solid $color2
+    border-left: 2px solid $color2
+    +fb(stretch, flex-start)
+    @media #{$xxlarge}
+        width: 85%
+    @media #{$xlarge}
+        padding: 1.5rem 1.5rem 0
+        width: 95%
+    @media #{$large}
+        padding: 2.5rem 2.5rem 0
+        width: 85%
+        flex-wrap: wrap
+    @media #{$small}
+        padding: 1.5rem 1.5rem 0
+        width: 95%
+    .image-text-left, .image-text-right
+        width: 50%
+        @media #{$large}
+            width: 100%
+    .image-text-left
+        background-size: cover
+        background-position: center
+        @media #{$large}
+            height: 20rem
+    .image-text-right
+        padding: 2.5rem 0 2.5rem 2.5rem
+        +fb(flex-start, center)
+        flex-direction: column 
+        @media #{$xlarge}
+            padding-left: 1.5rem
+        @media #{$large}
+            padding-left: 0
+            padding-bottom: 0
+        h2 
+            margin-bottom: 1rem
+            text-transform: uppercase
+            @media #{$small}
+                font-size: 1.5rem
