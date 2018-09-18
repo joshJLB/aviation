@@ -21,25 +21,17 @@
  'docker stop $(docker ps -aq)' to stop all containers
  'docker rm $(docker ps -aq)' to remove all containers
 
-6. if `phpmyadmin` and `db` containers are not active then `docker-compose -f dev-database.yml up -d --build`
+6. `docker-compose up -d —build`
 
-7. ensure that http://localhost:8080 takes you to `phpmyadmin`
+7. run: `dockerbash $projectName` then run: `startup`
 
-8. `docker-compose up -d —build`
+8. after install run: `rm -rf .git`
 
-9. browse to http://localhost
+9. run `serve` (if babel/core cannot be found, run: `npm install @babel/core` then `serve`)
 
-10. run through installer ( may take a second to load )
+10. browse to http://localhost:3000
 
-11. after successful WP install run `docker exec -it YOUR_PROJECT_NAME/FOLDER_NAME bash` (IF USING WINDOWS: run: `winpty docker exec -it YOUR_CONTAINER_NAME/CONTAINER_ID bash`)
-
-12. you should now enter a new command line instance within your project’s Wordpress container
-
-13. run 'chmod -R 777 *'
-
-14. `startup`
-
-15. 'serve'
+11. run through installer ( may take a second to load )
 
 
 #### Ensure that JLBTheme is being tracked in repository
@@ -49,35 +41,28 @@
 
 ### Move Site to Server
 
-1. go to phpmyadmin and export local database .sql file
+1. go to localhost:8080 and export local database .sql file
 
 2. open .sql file in text-editor and find & replace two things:
-  a. localhost: jlbdev1.net/$project/public_html
+  a. localhost: jlbdev.com/$project
   b. utf8mb4_unicode_$number_ci: utf8mb4_unicode_ci
 
-3. navigate to 192.168.7.26/phpmyadmin/ && create new user
+3. navigate to jlbdev.com:2082 and go to terminal. run: `cd public_html` && `mkdir $projectName` && `cd $projectName` && `wp-download`
+   `cd wp-content` and run: `rm -rf plugins && rm-rf themes`
 
-4. import .sql file to new user
+4. while in wp-content run: `git clone $yourRepository`
 
-5. go through quick-server-start but do not wp-install! ( already created locally )
+5. In MySQL Databases, create new database using your `$projectName`
 
-6. cd wp-content && git clone $project-repository
+6. While in MySQL Databases, create new user with the name `jlbdev_$projectName`, generate random password (Save to zoho aaccount) then assign it to the database you just          created.
 
-7. cd $project-repository && move all files into wp-content by ``` sudo mv -v * ../ ```
+7. In phpmyadmin, click on the database you just created. Import your .sql file
 
-8. cd back to wp-content && ```sudo rm -rf $project-folder```
+8. In file manager, open repo folder and move plugins, themes, and uploads into wp-content (up one level )
 
-9. navigate to jlbdev1.net/$project/public_html/wp-admin in browser
+9. rename "wp-config-sample.php" to "wp-config.php". right click file and edit file. add database name/username/password/salt keys.`
 
-10. upload plugins
-
-11. go to settings > permalink && save changes
-
-12. open project theme on server in text editor && search & replace localhost: jlbdev1.net/$project/public_html
-
-13. cd themes/JLBTheme && addDevDependencies
-
-14. add alias && source alias
+10. navigate to jlbdev.com/$project/wp-admin in browser
 
 
 ### MySQL Backups
