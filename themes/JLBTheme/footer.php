@@ -11,7 +11,8 @@
             <div class="footer-one-container2">
               <div class="footer-div-four"><?php wp_nav_menu( array( 'menu' => 'footer-three' ) ); ?></div>
               <div class="footer-div-five">
-                <a><?=get_field('phone', 'option'); ?></a>
+                <?=get_field('address', 'option'); ?>
+                <a href="tel:<?=get_field('phone', 'option'); ?>"><?=get_field('phone', 'option'); ?></a>
               </div>
             </div>
             <div class="footer-socials">

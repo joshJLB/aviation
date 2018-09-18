@@ -72,12 +72,16 @@
           justify-content: space-around
           border-bottom: none
         .footer-div-five
+          padding: 1.5rem
           border-left: 1px solid #fff
-          +fb(center,space-between)
+          +fb(stretch, space-between)
+          flex-direction: column
           @media #{$medium}
             border-left: none
-          a 
-            padding: 1.5rem
+          p 
+            margin: 0
+            font-size: .75rem
+          a, p 
             color: #fff
       .footer-socials
         position: absolute
