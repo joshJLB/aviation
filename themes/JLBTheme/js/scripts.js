@@ -88,7 +88,6 @@ function detectBrowser() {
 $('body').addClass(detectBrowser());
 
 // sliders
-
 $('.three-content').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -96,6 +95,11 @@ $('.three-content').slick({
   appendArrows: $('.three-link'),
   prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fal fa-angle-left' aria-hidden='true'></i></button>",
   nextArrow: "<button type='button' class='slick-next pull-right'><i class='fal fa-angle-right' aria-hidden='true'></i></button>",
+});
+
+// substrings
+$('.blog-excerpt').text(function(index, currentContent) {
+  return currentContent.substr(0,300) + '...';
 });
 
 // other functions

@@ -9,7 +9,6 @@
 
 <div class="contact-container">
     <h2><?=$title; ?></h2>
-    <h4><?=get_field('contact_sub_title', 'option'); ?></h4>
     <div class="contact-icon-containers">
       <div class="contact-icon">
         <a href="tel:<?=get_field('phone', 'option'); ?>">
