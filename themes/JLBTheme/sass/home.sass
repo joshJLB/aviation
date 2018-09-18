@@ -53,17 +53,17 @@
                     height: 5rem
                     border-radius: 0
                     background-color: $color2
-                a.nav-link.active:after
+                a.nav-link.active:before
                     content: ''
                     position: absolute
-                    top: 100%
                     left: 50%
+                    bottom: -1.5rem
                     transform: translateX(-50%)
                     width: 90%
-                    height: 10px
-                    background-color: transparent
-                    color: transparent
-                    box-shadow: 0 20px 20px $color2
+                    height: 4px
+                    background: #bbb                   
+                    border-radius: 140px / 2px
+                    box-shadow: 0 0 5px #bbb, 0 0 10px #aaa, 0 0 15px #777
                     @media #{$medium}
                         display: none
                 a.nav-link:hover 
@@ -223,12 +223,14 @@
                     display: flex
 // Section Four Styles
 .four
-    margin-bottom: -16rem
+    // margin-bottom: -16rem
     .four-container
         padding: 5rem 1rem 46.5rem
         background-size: cover
         background-position: center
         text-align: center
+        @media #{$large}
+            padding-bottom: 58rem
         h2 
             font-size: 3rem
             text-transform: uppercase

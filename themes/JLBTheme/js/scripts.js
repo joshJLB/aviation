@@ -105,4 +105,8 @@ $('.blog-excerpt').text(function(index, currentContent) {
 // other functions
 $('.gform_button').val('Receive Your Quote Today');
 
+if (window.location.href.indexOf("contact") > -1 || window.location.href.indexOf("blog") > -1) {
+  $('.footer').toggleClass('contact');
+} 
+
 });//close all jquery

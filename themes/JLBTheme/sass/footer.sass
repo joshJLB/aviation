@@ -2,7 +2,12 @@
 
 // Footer Styling
 .footer
+  margin-top: -15rem
   background-color: rgba(47,90,143,.9)
+  @media #{$large}
+    margin-top: -22rem
+  @media #{$medium}
+    margin-top: -30rem
   .footer-top
     padding-top: 4rem
     margin: 0 auto
@@ -134,3 +139,5 @@
     a
       color: white
       font-size: 0.6rem
+.footer.contact
+  margin-top: 0
